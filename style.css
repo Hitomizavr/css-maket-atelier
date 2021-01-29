@@ -1,0 +1,202 @@
+/* Нулюем всю фигню у всех элементов в документе */
+html,
+body {
+    /* Убираем отступы у body */
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+ul {
+    /* Убираем отступы у всех h1, h2 и ul в документе */
+    margin: 0;
+    padding: 0;
+    /* а также убираем маркеры у ul li */
+    list-style-type: none;
+}
+
+a {
+    /* Убираем подчёркивание у всех ссылок */
+    text-decoration: none;
+}
+
+/* Базовые стили документа */
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.42857143;
+    background-color: #fff;
+    height: 100%;
+}
+
+/* Сетка */
+.grid {
+    display: grid;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    /* Минимальные размеры блока с сеткой */
+    /* в будущем можно сделать адаптив */
+    min-width: 800px;
+    min-height: 600px;
+    grid-template-rows: 1fr 1fr 2fr 4fr 2.66fr 5.33fr 5.33fr 4.33fr 2.83fr 3.5fr 3.5fr 2.83fr 4.33fr 5.33fr 5.33fr 2.66fr 4fr 2fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 2fr 4fr 2.66fr 5.33fr 5.33fr 4.33fr 2.83fr 3.5fr 3.5fr 2.83fr 4.33fr 5.33fr 5.33fr 2.66fr 4fr 2fr 1fr 1fr;
+    /*background: url("images/grid.jpg") left top / 100% 100% no-repeat;*/
+}
+
+/* Выравнивание контента в ячейках сетки по вертикали: */
+/* По центру */
+.grid_cell_center {
+    display: flex;
+    align-items: center;
+}
+
+/* По нижнему краю */
+.grid_cell_bottom {
+    display: flex;
+    align-items: flex-end;
+}
+
+/* Правая картинка */
+.bg {
+    background: url(images/bg.png) center top / cover no-repeat;
+}
+
+/* Кнопка "Листать дальше" */
+.next {
+    display: flex;
+    white-space: nowrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: .9vw;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #333;
+    text-shadow: -2px 0 4px #fff, 0 2px 4px #fff, 1px 0 4px #fff, 0 -2px 4px #fff;
+}
+
+/* Логотип */
+.logo {
+    display: block;
+    max-width: 220px;
+    max-height: 40px;
+    width: 100%;
+    height: 100%;
+    background: url(images/logo.png) left center / contain no-repeat;
+}
+
+/* UL список меню */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+}
+
+/* Элементы меню */
+.menu li,
+.menu li a {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: .9vw;
+    color: #333;
+    text-shadow: -2px 0 4px #fff, 0 2px 4px #fff, 1px 0 4px #fff, 0 -2px 4px #fff;
+}
+
+/* Активный элемент меню */
+.menu li.active {
+    color: #ff4d87;
+}
+
+.menu_item {
+
+}
+
+
+/* Заголовок */
+.title {
+    white-space: pre-wrap;
+    font-size: 2.5vw;
+}
+
+/* Подзаголовок */
+.subtitle {
+    font-weight: 400;
+    font-size: 2vw;
+    font-family: "Marck Script", cursive;
+    color: #ff4d87;
+}
+
+/* Основной текст */
+.text {
+    color: #333;
+    white-space: pre-wrap;
+    font-size: 1vw;
+}
+
+/* Кнопка "Оставить контакты" */
+.button_contact {
+
+    display: inline-block;
+    white-space: nowrap;
+    font-size: .9vw;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #333;
+    border: 1px solid #333;
+    padding: 1vw 2vw;
+    text-align: center;
+    transition: .4s ease-in;
+}
+
+.button_contact:hover {
+    background-color: #F73C79;
+    color: white;
+    border: 1px solid #F73C79;
+
+}
+
+/* Масштабирование в зависимости от размеров окна */
+/* Минимальный размер шрифтов */
+@media (max-width: 800px) {
+    .next,
+    .menu li,
+    .menu li a,
+    .button_contact {
+        font-size: 8px
+    }
+
+    .title {
+        font-size: 18px
+    }
+
+    .subtitle {
+        font-size: 16px
+    }
+
+    .text {
+        font-size: 11px
+    }
+}
+
+/* Максимальный размер шрифтов */
+@media (min-width: 1200px) {
+    .next,
+    .menu li,
+    .menu li a,
+    .button_contact {
+        font-size: 14px
+    }
+
+    .title {
+        font-size: 35px
+    }
+
+    .subtitle {
+        font-size: 30px
+    }
+
+    .text {
+        font-size: 16px
+    }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name=viewport content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://fonts.googleapis.com/css?family=Marck+Script&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title>Friends Family Ателье одинаковой одежды для мам и дочек</title>
+</head>
+<body>
+    <!-- 
+        Как пользоваться сеткой:
+
+        <div style="grid-area: отступ_сверху / отступ_слева / span высота / span ширина;"></div>
+    -->
+
+    <div class="grid">
+        <!-- Правая картинка -->
+        <div class="bg" style="grid-area: 1 /  10 / span 20 / span 11; transform: translateX(5%); z-index: -1"></div>
+        <a class="next" href="#" style="grid-area: 19 /  15 / span 1 / span 2;">Листай дальше ⮕</a>
+        <!-- / Правая картинка -->
+
+        <!-- Навбар -->
+        <div class="grid_cell_center" style="grid-area: 3 /  4 / span 2 / span 3;">
+            <a class="logo" href="#"></a>
+        </div>
+        <div class="grid_cell_center" style="grid-area: 3 /  9 / span 2 / span 8;">
+            <ul class="menu">
+                <li class="menu_item active">Главная</li>
+                <li><a clas="menu_item" href="#">Преимущества</a></li>
+                <li><a clas="menu_item" href="#">Отзывы</a></li>
+                <li><a clas="menu_item" href="#">Контакты</a></li>
+                <li><a clas="menu_item" href="#">☰</a></li>
+            </ul>
+        </div>
+        <!-- / Навбар -->
+
+        <!-- Заголовок -->
+        <h1 class="grid_cell_bottom title" style="grid-area: 7 /  4 / span 3 / span 4;">Ателье одинаковой одежды для мам и дочек.</h1>
+        <!-- / Заголовок -->
+
+        <!-- Подзаголовок -->
+        <h2 class="grid_cell_center subtitle" style="grid-area: 11 /  4 / span 2 / span 4;">Индивидуальный пошив.</h2>
+        <!-- / Подзаголовок -->
+
+        <!-- Основной текст -->
+        <p class="grid_cell_center text" style="grid-area: 13 /  4 / span 2 / span 4;">Оставьте свой номер телефона или ссылку на VK страницу и мы с вами свяжемся.</p>
+        <!-- / Основной текст -->
+
+        <!-- Кнопка "Оставить контакты" -->
+        <div style="grid-area: 15 /  4 / span 1 / span 3;">
+            <a class="button_contact" href="#">Оставить контакты</a>
+        </div>
+        <!-- / Кнопка "Оставить контакты" -->
+    </div>
+</body>
+</html>
